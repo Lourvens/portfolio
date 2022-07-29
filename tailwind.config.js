@@ -6,11 +6,20 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
-      geyText: '#707070',
-      primary: '#4C51C6',
-      secondary: '#FD830D',
-      highlight: '#607FF2',
-      opacityBg: '#E9F4FF',
+      // colors for light theme
+      blue: {
+        50: '#E9F4FF',
+        300: '#607FF2',
+        500: '#4C51C6',
+        600: '#1A1C414B',
+        900: '#0E0F23',
+      },
+      orange: '#FD830D',
+      highlight: '#61DAFB',
+      gray: {
+        500: '#ECEFF1',
+        600: '#707070',
+      },
     },
     extend: {},
     fontFamily: {
