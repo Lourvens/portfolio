@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply px-4;
+  }
+  @media (min-width: 768px) { 
+    .wrapper {
+      @apply px-16
+    }
+  }
+}

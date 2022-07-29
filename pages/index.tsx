@@ -1,11 +1,19 @@
 import type { NextPage } from 'next';
+import Navbar from '../layouts/navbar';
+import Home from '../layouts/home';
 
-const styles = {
-  container: '',
+import useTheme from '../hooks/theme';
+
+const App: NextPage = () => {
+  const { ThemeProvider, initial } = useTheme();
+  return (
+    <ThemeProvider value={initial}>
+      <div>
+        <Navbar />
+        <Home />
+      </div>
+    </ThemeProvider>
+  );
 };
 
-const Home: NextPage = () => (
-  <div className={styles.container} />
-);
-
-export default Home;
+export default App;
