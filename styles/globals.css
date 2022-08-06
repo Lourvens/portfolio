@@ -1,19 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@400;700&family=Nunito:wght@500;600&family=Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@400;700&family=Nunito:wght@500;700&family=Underdog&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  body { 
+    overflow-x: hidden;
+    @apply text-gray-600 bg-slate-50
+  }
+  input,label, textarea {
+    @apply outline-none bg-transparent
+  }
+  body.dark {
+    @apply bg-blue-900 text-gray-500
+  }
+  .bg-primary {
+    @apply bg-orange dark:bg-blue-500 elegant:bg-slate-500
+  }
+  .bg-highlight {
+    @apply bg-blue-500 dark:bg-blue-400 elegant:bg-slate-500
+  }
+  .bg-tint {
+    @apply bg-blue-600 dark:bg-blue-600 elegant:bg-slate-700
+  }
+  .bg-increase {
+    @apply bg-orange dark:bg-blue-500 elegant:bg-slate-800
+  }
+  .bg-decrease {
+    @apply bg-blue-400 dark:bg-blue-300 elegant:bg-slate-500
+  }
+}
 @layer components {
+  .section--header {
+    @apply text-center mb-8
+  }
+  .section--subtitle {
+    @apply text-xl font-serif first-letter:capitalize text-orange elegant:text-slate-500
+  }
+  .section--title {
+    @apply font-bold font-heading capitalize text-blue-500 dark:text-blue-400 elegant:text-slate-800
+  }
+  .btn {
+    @apply flex items-center gap-2  capitalize px-4 py-2 rounded-md transition-all active:ring-offset-2 active:ring-2 active:ring-blue-300
+  }
+  .btn-primary {
+    @apply bg-orange text-slate-50 elegant:bg-slate-500 
+  }
+}
+
+
+@layer utilities {
+  .grid-wrap {
+    @apply lg:grid lg:grid-cols-12 lg:gap-10
+  }
   .wrapper {
     @apply px-4;
   }
   .section {
-    @apply my-10
+    @apply my-20
   }
-  @media (min-width: 768px) { 
+  .outlined {
+    @apply border border-solid border-blue-300 text-blue-300 elegant:text-slate-500 elegant:border-slate-500
+  }
+  @media screen(md) { 
     .wrapper {
       @apply px-16
     }
+  }
+  .desc {
+    @apply text-lg;
+  }
+  .title {
+    @apply text-xl font-heading font-bold capitalize text-blue-500 elegant:text-slate-500;
+  }
+  .link {
+    @apply text-blue-300 elegant:text-slate-600;
   }
 }

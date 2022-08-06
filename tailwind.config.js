@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -8,16 +11,20 @@ module.exports = {
   ],
   theme: {
     colors: {
+      // default color
+      transparent: 'transparent',
+      black: '#000000',
+      slate: colors.slate,
       // colors for light theme
       blue: {
         50: '#E9F4FF',
         300: '#607FF2',
+        400: '#61DAFB',
         500: '#4C51C6',
         600: '#1A1C414B',
         900: '#0E0F23',
       },
       orange: '#FD830D',
-      highlight: '#61DAFB',
       gray: {
         500: '#ECEFF1',
         600: '#707070',
@@ -30,5 +37,9 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant('elegant', '.elegant &');
+    }),
+  ],
 };
