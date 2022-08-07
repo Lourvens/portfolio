@@ -7,6 +7,7 @@ import { MdInvertColors } from 'react-icons/md';
 import { FaPaintBrush } from 'react-icons/fa';
 
 import useTheme from '../hooks/theme';
+import { themeType } from '../constants';
 
 const styles = {
   container: 'relative inline-block',
@@ -20,9 +21,9 @@ const PaintMenu = () => {
   const { updateTheme } = useContext(themeContext);
 
   const themes = [
-    { name: 'light', Icon: RiSunLine },
-    { name: 'dark', Icon: RiMoonClearLine },
-    { name: 'elegant', Icon: MdInvertColors },
+    { name: 'light' as themeType, Icon: RiSunLine },
+    { name: 'dark' as themeType, Icon: RiMoonClearLine },
+    { name: 'elegant' as themeType, Icon: MdInvertColors },
   ];
   return (
     <Menu as="div" className={styles.container}>

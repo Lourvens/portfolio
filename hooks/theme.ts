@@ -1,6 +1,5 @@
 import React from 'react';
-
-type themeType = 'dark' | 'light' | 'elegant'
+import { themeType } from '../constants';
 
 const UseTheme = () => {
   const [theme, setTheme] = React.useState<themeType>();

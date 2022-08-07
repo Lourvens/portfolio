@@ -9,3 +9,5 @@ export const CONTACT_INFO = {
   email: 'lourvens.luxamar@gmail.com',
   location: 'Haiti, Port-au-prince',
 };
+
+export type themeType = 'dark' | 'light' | 'elegant'
