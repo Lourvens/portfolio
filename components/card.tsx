@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { BsArrowRight } from 'react-icons/bs';
 import { FC } from 'react';
 
@@ -10,7 +10,7 @@ const styles = {
   arrowIcon: 'transform transition-transform group-hover:translate-x-2',
 };
 
-type PropTypes = FC<{ name : string, desc: string, banner: string, link: string}>;
+type PropTypes = FC<{ name : string, desc: string, banner: StaticImageData, link: string}>;
 
 const Card: PropTypes = ({
   name, desc, banner, link,

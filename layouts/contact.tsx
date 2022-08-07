@@ -65,10 +65,9 @@ const Contact = () => {
           action="mailto:lourvens.luxamar@gmail.com"
           method="get"
           encType="text/plain"
-          onSubmit={(e) => e.target.reset()}
         >
-          <InputField type="text" Icon={FaUserAlt} placeholder="Full name" />
-          <InputField type="email" Icon={MdEmail} placeholder="Email address" />
+          <InputField Icon={FaUserAlt} placeholder="Full name" />
+          <InputField Icon={MdEmail} placeholder="Email address" />
           <TextareaField />
           <button type="submit" className="btn btn-primary my-2 font-bold text-xl ">
             <IoIosSend />
