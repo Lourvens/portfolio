@@ -2,16 +2,17 @@ import {
   useScroll, useSpring, useTransform, motion,
 } from 'framer-motion';
 import Image from 'next/image';
-import { useCallback } from 'react';
+import { FC, RefObject, useCallback } from 'react';
 import avatar from '../assets/avatar.png';
+
+type PropTypes = FC<{ scrollRef: RefObject<HTMLDivElement> | undefined }>
 
 const styles = {
   imageBox: 'sticky top-1/3 lg:col-span-4 flex items-center justify-center relative w-[260px] h-[260px] hidden lg:block',
   imageBoxPaper: 'absolute w-full h-full bg-decrease rounded-md',
   imageContainer: 'z-10 relative w-full h-full bg-increase rounded-md overflow-hidden',
 };
-
-const AnimatedCard = ({ scrollRef }) => {
+const AnimatedCard: PropTypes = ({ scrollRef }) => {
   const { scrollYProgress } = useScroll({
     offset: ['start start', 'center end'],
   });
