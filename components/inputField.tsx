@@ -6,7 +6,7 @@ const styles = {
     peer-valid:-translate-y-1/2 peer-valid:scale-90 peer-valid:-translate-x-4
   `,
 };
-type PropTypes = FC<{ Icon: JSX.Element, placeholder: string}>
+type PropTypes = FC<{ Icon: any, placeholder: string}>
 const InputField: PropTypes = ({
   Icon, placeholder,
 }) => (
