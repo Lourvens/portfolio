@@ -62,7 +62,7 @@ const Home = () => (
       <div className={styles.highlight}>frontend developer</div>
       <p className="desc">
         You want to create shapely, scalable and robust web application then
-        it is goo to refer to a competent man in this field.
+        it is good to refer to a competent person in this field.
       </p>
       <div className={styles.btnGroup}>
         <a className="btn btn-primary" href="#contact">

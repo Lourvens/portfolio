@@ -1,7 +1,11 @@
 import { FiTwitter, FiGithub, FiLinkedin } from 'react-icons/fi';
 import { SOCIAL_LINKS } from '../constants';
 
-const navlinkDetails = ['about me', 'projects', 'contacts'];
+const navlinkDetails = [
+  { title: 'about me', to: '#about' },
+  { title: 'projects', to: '#project' },
+  { title: 'contacts', to: '#contact' },
+];
 const socialdetails = [
   {
     name: 'twitter',
@@ -49,11 +53,11 @@ const Footer = () => (
         <div className="flex gap-8 capitalize text-lg">
           {navlinkDetails.map((link) => (
             <a
-              href="#link"
-              key={link}
+              href={link.to}
+              key={link.to}
               className="underline text-slate-300 font-heading"
             >
-              {link}
+              {link.title}
             </a>
           ))}
         </div>

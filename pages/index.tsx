@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { useRef } from 'react';
+import Head from '../components/Head';
 import useTheme from '../hooks/theme';
-
 import Navbar from '../layouts/navbar';
 import Home from '../layouts/home';
 import About from '../layouts/about';
@@ -10,13 +10,13 @@ import Contact from '../layouts/contact';
 import Footer from '../layouts/footer';
 
 import AnimatedCard from '../components/animatedCard';
-import AnimateMaskTheme from '../components/animateMaskTheme';
 
 const App: NextPage = () => {
   const { ThemeProvider, initial } = useTheme();
   const AHSectionRef = useRef<any>();
   return (
     <ThemeProvider value={initial}>
+      <Head />
       <div className="relative">
         <Navbar />
         <div className="grid-wrap mt-[200px] wrapper relative" ref={AHSectionRef}>
