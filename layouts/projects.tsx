@@ -5,7 +5,7 @@ const details = [
   {
     name: 'Netbook',
     desc: 'A responsive landing page created with NextJs',
-    link: 'https://netbook-b44nkfyi6-lourvens.vercel.app/',
+    link: 'https://netbook-lourvens.vercel.app/',
     banner: NetbookBrand,
   },
 ];
