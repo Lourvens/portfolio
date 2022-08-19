@@ -28,7 +28,7 @@ const Card: PropTypes = ({
         {' '}
       </p>
       <a href={link} target="_blank" rel="noreferrer" className={styles.link}>
-        See more
+        open the website
         {' '}
         <BsArrowRight className={styles.arrowIcon} />
       </a>
