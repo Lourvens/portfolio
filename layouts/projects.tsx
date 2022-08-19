@@ -22,7 +22,7 @@ const Project = () => (
       <h3 className="section--subtitle">What I can do?</h3>
       <h1 className="section--title">Project</h1>
     </div>
-    <div className="py-8 flex justify-center gap-4 overflow-x-scroll lg:overflow-x-hidden">
+    <div className="py-8 flex lg:justify-center gap-4 overflow-x-scroll lg:overflow-x-hidden">
       {details.map((detail) => <Card key={detail.name} {...detail} />)}
     </div>
   </div>
