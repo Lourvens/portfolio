@@ -1,6 +1,7 @@
 import Card from '../components/card';
 import NetbookBrand from '../assets/brand/netbook.png';
 import DagencyBrand from '../assets/brand/dagency.png';
+import CreatificBrand from '../assets/brand/creatific.png';
 
 const details = [
   {
@@ -13,6 +14,11 @@ const details = [
     desc: 'A modern agency landing page create with NextJs / NextUi',
     link: 'https://dagency.vercel.app/',
     banner: DagencyBrand,
+  }, {
+    name: 'Creatific',
+    desc: 'A minimalistic agency website build on Astro',
+    link: 'https://creatific.vercel.app/',
+    banner: CreatificBrand,
   },
 ];
 

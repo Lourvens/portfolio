@@ -69,7 +69,7 @@ const Home = () => (
           <MdCall />
           <span>contact me</span>
         </a>
-        <a className="btn outlined" download href="cv.pdf">
+        <a className="btn outlined" download="luxamarlourvens-resume" href="cv.pdf">
           <HiOutlineDownload />
           <span>download the CV</span>
         </a>
